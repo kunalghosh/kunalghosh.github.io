@@ -8,6 +8,7 @@ tags = [
     "privacy",
     "mytag",
 ]
+math = true
 +++
 
 
