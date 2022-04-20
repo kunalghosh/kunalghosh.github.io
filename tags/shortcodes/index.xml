@@ -1,13 +1,6 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>shortcodes on Kunal's Blog</title><link>/tags/shortcodes/</link><description>Kunal's Blog (shortcodes)</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 10 Mar 2019 00:00:00 +0000</lastBuildDate><atom:link href="/tags/shortcodes/index.xml" rel="self" type="application/rss+xml"/><item><title>Rich Content</title><link>/post/rich-content/</link><pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate><guid>/post/rich-content/</guid><description>&lt;p>math: true&lt;/p>
-&lt;p>Hugo ships with several &lt;a href="https://gohugo.io/content-management/shortcodes/#use-hugo-s-built-in-shortcodes">Built-in Shortcodes&lt;/a> for rich content, along with a &lt;a href="https://gohugo.io/about/hugo-and-gdpr/">Privacy Config&lt;/a> and a set of Simple Shortcodes that enable static and no-JS versions of various social media embeds.&lt;/p>
-&lt;p>Testing math&lt;/p>
-&lt;h2 id="-x-sim-n01-" >&lt;code>$ x \sim N(0,1) $&lt;/code>
-&lt;span>
-&lt;a href="#-x-sim-n01-">
-&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
-&lt;/a>
-&lt;/span>
-&lt;/h2>&lt;h2 id="youtube-privacy-enhanced-shortcode" >YouTube Privacy Enhanced Shortcode
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>shortcodes on Kunal's Blog</title><link>/tags/shortcodes/</link><description>Kunal's Blog (shortcodes)</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 10 Mar 2019 00:00:00 +0000</lastBuildDate><atom:link href="/tags/shortcodes/index.xml" rel="self" type="application/rss+xml"/><item><title>Rich Content</title><link>/post/rich-content.pl/</link><pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate><guid>/post/rich-content.pl/</guid><description>&lt;p>Hugo ships with several &lt;a href="https://gohugo.io/content-management/shortcodes/#use-hugo-s-built-in-shortcodes">Built-in Shortcodes&lt;/a> for rich content, along with a &lt;a href="https://gohugo.io/about/hugo-and-gdpr/">Privacy Config&lt;/a> and a set of Simple Shortcodes that enable static and no-JS versions of various social media embeds.&lt;/p>
+&lt;hr>
+&lt;h2 id="youtube-privacy-enhanced-shortcode" >YouTube Privacy Enhanced Shortcode
 &lt;span>
 &lt;a href="#youtube-privacy-enhanced-shortcode">
 &lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
@@ -64,9 +57,15 @@ cursor: pointer;
 &lt;div class="s_video_simple __h_video">
 &lt;a href="https://vimeo.com/4.8912912e&amp;#43;07" rel="noopener" target="_blank">
 &lt;img src="https://i.vimeocdn.com/video/337401969-979f0cc9f55fdf305fb8984e90d92639ec9d7ecc4c9dfbc6536e28edb43784ce-d_640" srcset="https://i.vimeocdn.com/video/337401969-979f0cc9f55fdf305fb8984e90d92639ec9d7ecc4c9dfbc6536e28edb43784ce-d_640 1x, https://i.vimeocdn.com/video/337401969-979f0cc9f55fdf305fb8984e90d92639ec9d7ecc4c9dfbc6536e28edb43784ce-d_640 2x" alt="Sing Jan Swing - Kinetic Type">
-&lt;div class="play">&lt;svg version="1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 61 61">&lt;circle cx="30.5" cy="30.5" r="30.5" opacity=".8" fill="#000">&lt;/circle>&lt;path d="M25.3 19.2c-2.1-1.2-3.8-.2-3.8 2.2v18.1c0 2.4 1.7 3.4 3.8 2.2l16.6-9.1c2.1-1.2 2.1-3.2 0-4.4l-16.6-9z" fill="#fff">&lt;/path>&lt;/svg>&lt;/div>&lt;/a>&lt;/div></description></item><item><title>Rich Content</title><link>/post/rich-content.pl/</link><pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate><guid>/post/rich-content.pl/</guid><description>&lt;p>Hugo ships with several &lt;a href="https://gohugo.io/content-management/shortcodes/#use-hugo-s-built-in-shortcodes">Built-in Shortcodes&lt;/a> for rich content, along with a &lt;a href="https://gohugo.io/about/hugo-and-gdpr/">Privacy Config&lt;/a> and a set of Simple Shortcodes that enable static and no-JS versions of various social media embeds.&lt;/p>
-&lt;hr>
-&lt;h2 id="youtube-privacy-enhanced-shortcode" >YouTube Privacy Enhanced Shortcode
+&lt;div class="play">&lt;svg version="1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 61 61">&lt;circle cx="30.5" cy="30.5" r="30.5" opacity=".8" fill="#000">&lt;/circle>&lt;path d="M25.3 19.2c-2.1-1.2-3.8-.2-3.8 2.2v18.1c0 2.4 1.7 3.4 3.8 2.2l16.6-9.1c2.1-1.2 2.1-3.2 0-4.4l-16.6-9z" fill="#fff">&lt;/path>&lt;/svg>&lt;/div>&lt;/a>&lt;/div></description></item><item><title>Rich Content with Math</title><link>/post/rich-content/</link><pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate><guid>/post/rich-content/</guid><description>&lt;p>Hugo ships with several &lt;a href="https://gohugo.io/content-management/shortcodes/#use-hugo-s-built-in-shortcodes">Built-in Shortcodes&lt;/a> for rich content, along with a &lt;a href="https://gohugo.io/about/hugo-and-gdpr/">Privacy Config&lt;/a> and a set of Simple Shortcodes that enable static and no-JS versions of various social media embeds.&lt;/p>
+&lt;p>Testing math&lt;/p>
+&lt;h2 id="-x-sim-n01-" >$$ x \sim N(0,1) $$
+&lt;span>
+&lt;a href="#-x-sim-n01-">
+&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
+&lt;/a>
+&lt;/span>
+&lt;/h2>&lt;h2 id="youtube-privacy-enhanced-shortcode" >YouTube Privacy Enhanced Shortcode
 &lt;span>
 &lt;a href="#youtube-privacy-enhanced-shortcode">
 &lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
