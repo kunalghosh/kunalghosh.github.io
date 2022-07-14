@@ -1,67 +1,57 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>gp on Kunal's Blog</title><link>/tags/gp/</link><description>Kunal's Blog (gp)</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 14 Jul 2022 00:00:00 +0000</lastBuildDate><atom:link href="/tags/gp/index.xml" rel="self" type="application/rss+xml"/><item><title>GSoC 2022 : Fast Gaussian process implementation in PyMC</title><link>/post/gsoc_first_post/</link><pubDate>Thu, 14 Jul 2022 00:00:00 +0000</pubDate><guid>/post/gsoc_first_post/</guid><description>&lt;p>This is a first test post, lets see if my &lt;a href="https://kunalghosh.github.io">hugo server&lt;/a> picks it up or not.&lt;/p>
-&lt;p>Hugo ships with several &lt;a href="https://gohugo.io/content-management/shortcodes/#use-hugo-s-built-in-shortcodes">Built-in Shortcodes&lt;/a> for rich content, along with a &lt;a href="https://gohugo.io/about/hugo-and-gdpr/">Privacy Config&lt;/a> and a set of Simple Shortcodes that enable static and no-JS versions of various social media embeds.&lt;/p>
-&lt;p>Testing math&lt;/p>
-&lt;h2 id="-x-sim-n01-" >$$ x \sim N(0,1) $$
-&lt;span>
-&lt;a href="#-x-sim-n01-">
-&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
-&lt;/a>
-&lt;/span>
-&lt;/h2>&lt;h2 id="youtube-privacy-enhanced-shortcode" >YouTube Privacy Enhanced Shortcode
-&lt;span>
-&lt;a href="#youtube-privacy-enhanced-shortcode">
-&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
-&lt;/a>
-&lt;/span>
-&lt;/h2>
-&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-&lt;iframe src="https://www.youtube.com/embed/ZJthWmvUzzc" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
-&lt;/div>
-&lt;br>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>gp on Kunal's Blog</title><link>/tags/gp/</link><description>Kunal's Blog (gp)</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 14 Jul 2022 00:00:00 +0000</lastBuildDate><atom:link href="/tags/gp/index.xml" rel="self" type="application/rss+xml"/><item><title>GSoC 2022 : Fast Gaussian process implementation in PyMC</title><link>/post/gsoc_first_post/</link><pubDate>Thu, 14 Jul 2022 00:00:00 +0000</pubDate><guid>/post/gsoc_first_post/</guid><description>&lt;p>Gaussian processes (GPs) are very useful class of &lt;code>semi-parametric&lt;/code> machine learning models.
+Before their use in more modern classification and regression tasks,
+they have been very successfully applied in searching for underground oil fields.
+GPs were called &lt;cite>&lt;strong>kriging models&lt;/strong> &lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>&lt;/cite> back then, but the idea was the same.&lt;/p>
+&lt;p>GPs belong to a general class of models known as &lt;cite> &lt;strong>kernel methods&lt;/strong> &lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup> &lt;/cite>.
+Kernel methods use something called the &lt;strong>kernel function&lt;/strong>, denoted as&lt;br>
+$k(\bold{x},\bold{x&amp;rsquo;})$. Where $\bold{x} \in R^{d}$ represents the input data
+and $k$ can be any function which returns a scalar.
+For example, the &lt;code>dot-product kernel&lt;/code> $$ k(\bold{x}, \bold{x&amp;rsquo;}) \coloneqq \bold{x}^T\bold{x} $$&lt;/p>
+&lt;p>Assuming $N$ such vectors $\bold{x} \in R^{d}$ are stacked, then we can write the input data as
+$X \in R^{NxD}$ and correspondingly the kernel is written as $K_{X,X} \in R^{NxN}$.
+Let&amp;rsquo;s say, we are interested in building a regression model where the target values
+are denoted as $\bold{y} \in R^{n}$ then gaussian process models are trained by optimizing
+something called the &lt;cite>&lt;strong>log marginal likelihood&lt;/strong> &lt;sup id="fnref:3">&lt;a href="#fn:3" class="footnote-ref" role="doc-noteref">3&lt;/a>&lt;/sup>&lt;/cite>.&lt;/p>
+&lt;p>Log marginal likelihood is a function of the input $X, \bold{y}$ and is written as,&lt;/p>
+&lt;p>\begin{equation}
+\tag{1}
+L(\theta | X, \bold{y}) \approx log \left| K_{X,X}\right| - \bold{y}^{T}K_{X,X}^{-1}\bold{y}
+\end{equation}&lt;/p>
+&lt;p>If we want to optimize the above function using gradient based methods we need to
+compute the gradient $ \frac{dL}{d\theta} $ which looks like,&lt;/p>
+&lt;p>\begin{equation}
+\tag{2}
+\frac{dL}{d\theta} = \bold{y}^{T} K_{X,X}^{-1} \frac{dK_{X,X}}{d\theta} K_{X,X}^{-1}\bold{y} + \text{Tr} \left( K_{X,X}^{-1} \frac{dK_{X,X}}{d\theta} \right)
+\end{equation}&lt;/p>
+&lt;blockquote>
+&lt;p>In equation 1 and 2 above, the most expensive compute steps are&lt;/p>
+&lt;ol>
+&lt;li>The log determinant : $ log \left| K_{X,X}\right| $&lt;/li>
+&lt;li>Inverse of the kernel or compute the &lt;code>solve&lt;/code> : $ K_{X,X}^{-1}\bold{y} $&lt;/li>
+&lt;li>Trace : $ \text{Tr} \left( K_{X,X}^{-1} \frac{dK_{X,X}}{d\theta} \right) $&lt;/li>
+&lt;/ol>
+&lt;/blockquote>
+&lt;p>In &lt;cite> Gardner, et.al 2018 &lt;sup id="fnref:4">&lt;a href="#fn:4" class="footnote-ref" role="doc-noteref">4&lt;/a>&lt;/sup> &lt;/cite> they proposed a few algorithms that expresses each of the above three expensive
+computations to large matrix computations which can be sped-up when running on a GPU.&lt;/p>
+&lt;blockquote>
+&lt;p>For my GSoC, I will implement a sub-class the &lt;a href="https://github.com/pymc-devs/pymc/blob/562be3781c9d37d3300c4efd4cf6598e5739c32d/pymc/gp/gp.py#L358">MarginalGP&lt;/a>
+and override the &lt;code>_build_conditional()&lt;/code> and &lt;code>_build_marginal_likelihood()&lt;/code> as prescribed in &lt;cite> Gardner, et.al 2018 &lt;sup id="fnref1:4">&lt;a href="#fn:4" class="footnote-ref" role="doc-noteref">4&lt;/a>&lt;/sup> &lt;/cite> and that should significantly
+speed up Gaussian process inference in PyMC 😍&lt;/p>
+&lt;/blockquote>
+&lt;div class="footnotes" role="doc-endnotes">
 &lt;hr>
-&lt;h2 id="twitter-simple-shortcode" >Twitter Simple Shortcode
-&lt;span>
-&lt;a href="#twitter-simple-shortcode">
-&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
-&lt;/a>
-&lt;/span>
-&lt;/h2>&lt;blockquote class="twitter-tweet">&lt;p lang="en" dir="ltr">“In addition to being more logical, asymmetry has the advantage that its complete appearance is far more optically effective than symmetry.”&lt;br>— Jan Tschichold &lt;a href="https://t.co/gcv7SrhvJb">pic.twitter.com/gcv7SrhvJb&lt;/a>&lt;/p>&amp;mdash; Graphic Design History (@DesignReviewed) &lt;a href="https://twitter.com/DesignReviewed/status/1085870671291310081?ref_src=twsrc%5Etfw">January 17, 2019&lt;/a>&lt;/blockquote>
-&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8">&lt;/script>
-&lt;br>
-&lt;hr>
-&lt;h2 id="vimeo-simple-shortcode" >Vimeo Simple Shortcode
-&lt;span>
-&lt;a href="#vimeo-simple-shortcode">
-&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
-&lt;/a>
-&lt;/span>
-&lt;/h2>
-&lt;style>
-.__h_video {
-position: relative;
-padding-bottom: 56.23%;
-height: 0;
-overflow: hidden;
-width: 100%;
-background: #000;
-}
-.__h_video img {
-width: 100%;
-height: auto;
-color: #000;
-}
-.__h_video .play {
-height: 72px;
-width: 72px;
-left: 50%;
-top: 50%;
-margin-left: -36px;
-margin-top: -36px;
-position: absolute;
-cursor: pointer;
-}
-&lt;/style>
-&lt;div class="s_video_simple __h_video">
-&lt;a href="https://vimeo.com/4.8912912e&amp;#43;07" rel="noopener" target="_blank">
-&lt;img src="https://i.vimeocdn.com/video/337401969-979f0cc9f55fdf305fb8984e90d92639ec9d7ecc4c9dfbc6536e28edb43784ce-d_640" srcset="https://i.vimeocdn.com/video/337401969-979f0cc9f55fdf305fb8984e90d92639ec9d7ecc4c9dfbc6536e28edb43784ce-d_640 1x, https://i.vimeocdn.com/video/337401969-979f0cc9f55fdf305fb8984e90d92639ec9d7ecc4c9dfbc6536e28edb43784ce-d_640 2x" alt="Sing Jan Swing - Kinetic Type">
-&lt;div class="play">&lt;svg version="1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 61 61">&lt;circle cx="30.5" cy="30.5" r="30.5" opacity=".8" fill="#000">&lt;/circle>&lt;path d="M25.3 19.2c-2.1-1.2-3.8-.2-3.8 2.2v18.1c0 2.4 1.7 3.4 3.8 2.2l16.6-9.1c2.1-1.2 2.1-3.2 0-4.4l-16.6-9z" fill="#fff">&lt;/path>&lt;/svg>&lt;/div>&lt;/a>&lt;/div></description></item></channel></rss>
+&lt;ol>
+&lt;li id="fn:1">
+&lt;p>&lt;a href="https://en.wikipedia.org/wiki/Kriging">Wikipedia: Kriging&lt;/a>&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:2">
+&lt;p>An overview of kernel methods is out of scope of this post, but a good overview of Gaussian processes can be found in &lt;a href="https://gaussianprocess.org/gpml/">Rassmussen and Williams&lt;/a>.&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:3">
+&lt;p>&lt;a href="https://gaussianprocess.org/gpml/chapters/RW2.pdf">Equation 2.30&lt;/a> in &lt;em>Gaussian Processes for Machine Learning&lt;/em> gives the log marginal likelihood for a zero-mean Gaussian process.&amp;#160;&lt;a href="#fnref:3" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:4">
+&lt;p>GPyTorch: Blackbox Matrix-Matrix Gaussian Process Inference with GPU Acceleration. &lt;a href="http://arxiv.org/abs/1809.11165">arxiv&lt;/a>&amp;#160;&lt;a href="#fnref:4" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&amp;#160;&lt;a href="#fnref1:4" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;/div></description></item></channel></rss>
