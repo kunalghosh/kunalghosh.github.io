@@ -3,12 +3,22 @@ baseUrl: ""
 title: "Kunal's Blog"
 theme: "anubis"
 paginate: 5
-disqusShortname: "yourdiscussshortname"
-googleAnalytics: "G-12345"
+disqusShortname: "disqus_tr8whhgxN0"
+googleAnalytics: "G-FTG371ZK7T"
 enableRobotsTXT: true
 
 menu:
   main:
+  - identifier: about
+    name: About
+    title: About
+    url: /about/
+    weight: 0
+  - identifier: tags
+    name: Tags
+    title: Tags
+    url: /tags/
+    weight: 0
   - identifier: archive
     name: Archive
     title: Archive
