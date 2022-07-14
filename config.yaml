@@ -6,6 +6,7 @@ paginate: 5
 disqusShortname: "disqus_tr8whhgxN0"
 googleAnalytics: "G-FTG371ZK7T"
 enableRobotsTXT: true
+enableEmoji: true
 
 menu:
   main:
