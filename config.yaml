@@ -61,6 +61,8 @@ params:
   social:
   - id: github
     name: kunalghosh
+  - id: twitter
+    name: kunalghosh
 #  - id: hugo
 #    url: "https://gohugo.io/"
 #    icon: "hugo"
