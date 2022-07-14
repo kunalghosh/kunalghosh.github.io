@@ -9,6 +9,7 @@ tags = [
     "mytag",
 ]
 math = true
+hidden = true
 +++
 
 

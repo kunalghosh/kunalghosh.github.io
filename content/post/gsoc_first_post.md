@@ -8,6 +8,7 @@ tags = [
     "gsoc",
     "pymc",
 ]
+favourite = true
 math = true
 +++
 
