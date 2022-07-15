@@ -17,84 +17,64 @@
       <pubDate>Thu, 14 Jul 2022 00:00:00 +0000</pubDate>
       
       <guid>/post/gsoc_first_post/</guid>
-      <description>&lt;p&gt;This is a first test post, lets see if my &lt;a href=&#34;https://kunalghosh.github.io&#34;&gt;hugo server&lt;/a&gt; picks it up or not.&lt;/p&gt;
-&lt;p&gt;Hugo ships with several &lt;a href=&#34;https://gohugo.io/content-management/shortcodes/#use-hugo-s-built-in-shortcodes&#34;&gt;Built-in Shortcodes&lt;/a&gt; for rich content, along with a &lt;a href=&#34;https://gohugo.io/about/hugo-and-gdpr/&#34;&gt;Privacy Config&lt;/a&gt; and a set of Simple Shortcodes that enable static and no-JS versions of various social media embeds.&lt;/p&gt;
-&lt;p&gt;Testing math&lt;/p&gt;
-&lt;h2 id=&#34;-x-sim-n01-&#34; &gt;$$ x \sim N(0,1) $$
-&lt;span&gt;
-    &lt;a href=&#34;#-x-sim-n01-&#34;&gt;
-        &lt;svg viewBox=&#34;0 0 28 23&#34; height=&#34;100%&#34; width=&#34;19&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;&lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34; fill=&#34;none&#34; stroke-linecap=&#34;round&#34; stroke-miterlimit=&#34;10&#34; stroke-width=&#34;2&#34;/&gt;&lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34; fill=&#34;none&#34; stroke-linecap=&#34;round&#34; stroke-miterlimit=&#34;10&#34; stroke-width=&#34;2&#34;/&gt;&lt;/svg&gt;
-    &lt;/a&gt;
-&lt;/span&gt;
-&lt;/h2&gt;&lt;h2 id=&#34;youtube-privacy-enhanced-shortcode&#34; &gt;YouTube Privacy Enhanced Shortcode
-&lt;span&gt;
-    &lt;a href=&#34;#youtube-privacy-enhanced-shortcode&#34;&gt;
-        &lt;svg viewBox=&#34;0 0 28 23&#34; height=&#34;100%&#34; width=&#34;19&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;&lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34; fill=&#34;none&#34; stroke-linecap=&#34;round&#34; stroke-miterlimit=&#34;10&#34; stroke-width=&#34;2&#34;/&gt;&lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34; fill=&#34;none&#34; stroke-linecap=&#34;round&#34; stroke-miterlimit=&#34;10&#34; stroke-width=&#34;2&#34;/&gt;&lt;/svg&gt;
-    &lt;/a&gt;
-&lt;/span&gt;
-&lt;/h2&gt;
-&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-  &lt;iframe src=&#34;https://www.youtube.com/embed/ZJthWmvUzzc&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-
-&lt;br&gt;
+      <description>&lt;p&gt;Gaussian processes (GPs) are very useful class of &lt;code&gt;semi-parametric&lt;/code&gt; machine learning models.
+Before their use in more modern classification and regression tasks,
+they have been very successfully applied in searching for underground oil fields.
+GPs were called &lt;cite&gt;&lt;strong&gt;kriging models&lt;/strong&gt; &lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/cite&gt; back then, but the idea was the same.&lt;/p&gt;
+&lt;p&gt;GPs belong to a general class of models known as &lt;cite&gt; &lt;strong&gt;kernel methods&lt;/strong&gt; &lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt; &lt;/cite&gt;.
+Kernel methods use something called the &lt;strong&gt;kernel function&lt;/strong&gt;, denoted as&lt;br&gt;
+$k(\bold{x},\bold{x&amp;rsquo;})$. Where $\bold{x} \in R^{d}$ represents the input data
+and $k$ can be any function which returns a scalar.
+For example, the &lt;code&gt;dot-product kernel&lt;/code&gt; $$ k(\bold{x}, \bold{x&amp;rsquo;}) \coloneqq \bold{x}^T\bold{x} $$&lt;/p&gt;
+&lt;p&gt;Assuming $N$ such vectors $\bold{x} \in R^{d}$ are stacked, then we can write the input data as
+$X \in R^{NxD}$ and correspondingly the kernel is written as $K_{X,X} \in R^{NxN}$.
+Let&amp;rsquo;s say, we are interested in building a regression model where the target values
+are denoted as $\bold{y} \in R^{n}$ then gaussian process models are trained by optimizing
+something called the &lt;cite&gt;&lt;strong&gt;log marginal likelihood&lt;/strong&gt; &lt;sup id=&#34;fnref:3&#34;&gt;&lt;a href=&#34;#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;/cite&gt;.&lt;/p&gt;
+&lt;p&gt;Log marginal likelihood is a function of the input $X, \bold{y}$ and is written as,&lt;/p&gt;
+&lt;p&gt;\begin{equation}
+\tag{1}
+L(\theta | X, \bold{y}) \approx log \left| K_{X,X}\right| - \bold{y}^{T}K_{X,X}^{-1}\bold{y}
+\end{equation}&lt;/p&gt;
+&lt;p&gt;If we want to optimize the above function using gradient based methods we need to
+compute the gradient $ \frac{dL}{d\theta} $ which looks like,&lt;/p&gt;
+&lt;p&gt;\begin{equation}
+\tag{2}
+\frac{dL}{d\theta} = \bold{y}^{T} K_{X,X}^{-1} \frac{dK_{X,X}}{d\theta} K_{X,X}^{-1}\bold{y} + \text{Tr} \left( K_{X,X}^{-1} \frac{dK_{X,X}}{d\theta} \right)
+\end{equation}&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;In equation 1 and 2 above, the most expensive compute steps are&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;The log determinant : $ log \left| K_{X,X}\right| $&lt;/li&gt;
+&lt;li&gt;Inverse of the kernel or compute the &lt;code&gt;solve&lt;/code&gt; : $ K_{X,X}^{-1}\bold{y} $&lt;/li&gt;
+&lt;li&gt;Trace : $ \text{Tr} \left( K_{X,X}^{-1} \frac{dK_{X,X}}{d\theta} \right)  $&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;In &lt;cite&gt; Gardner, et.al 2018 &lt;sup id=&#34;fnref:4&#34;&gt;&lt;a href=&#34;#fn:4&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;4&lt;/a&gt;&lt;/sup&gt; &lt;/cite&gt; they proposed a few algorithms that expresses each of the above three expensive
+computations to large matrix computations which can be sped-up when running on a GPU.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;For my GSoC, I will implement a sub-class the &lt;a href=&#34;https://github.com/pymc-devs/pymc/blob/562be3781c9d37d3300c4efd4cf6598e5739c32d/pymc/gp/gp.py#L358&#34;&gt;MarginalGP&lt;/a&gt;
+and override the &lt;code&gt;_build_conditional()&lt;/code&gt; and &lt;code&gt;_build_marginal_likelihood()&lt;/code&gt; as prescribed in &lt;cite&gt; Gardner, et.al 2018 &lt;sup id=&#34;fnref:4&#34;&gt;&lt;a href=&#34;#fn:4&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;4&lt;/a&gt;&lt;/sup&gt; &lt;/cite&gt; and that should significantly
+speed up Gaussian process inference in PyMC 😍&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;section class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;twitter-simple-shortcode&#34; &gt;Twitter Simple Shortcode
-&lt;span&gt;
-    &lt;a href=&#34;#twitter-simple-shortcode&#34;&gt;
-        &lt;svg viewBox=&#34;0 0 28 23&#34; height=&#34;100%&#34; width=&#34;19&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;&lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34; fill=&#34;none&#34; stroke-linecap=&#34;round&#34; stroke-miterlimit=&#34;10&#34; stroke-width=&#34;2&#34;/&gt;&lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34; fill=&#34;none&#34; stroke-linecap=&#34;round&#34; stroke-miterlimit=&#34;10&#34; stroke-width=&#34;2&#34;/&gt;&lt;/svg&gt;
-    &lt;/a&gt;
-&lt;/span&gt;
-&lt;/h2&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;“In addition to being more logical, asymmetry has the advantage that its complete appearance is far more optically effective than symmetry.”&lt;br&gt;— Jan Tschichold &lt;a href=&#34;https://t.co/gcv7SrhvJb&#34;&gt;pic.twitter.com/gcv7SrhvJb&lt;/a&gt;&lt;/p&gt;&amp;mdash; Graphic Design History (@DesignReviewed) &lt;a href=&#34;https://twitter.com/DesignReviewed/status/1085870671291310081?ref_src=twsrc%5Etfw&#34;&gt;January 17, 2019&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-
-&lt;br&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;vimeo-simple-shortcode&#34; &gt;Vimeo Simple Shortcode
-&lt;span&gt;
-    &lt;a href=&#34;#vimeo-simple-shortcode&#34;&gt;
-        &lt;svg viewBox=&#34;0 0 28 23&#34; height=&#34;100%&#34; width=&#34;19&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;&lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34; fill=&#34;none&#34; stroke-linecap=&#34;round&#34; stroke-miterlimit=&#34;10&#34; stroke-width=&#34;2&#34;/&gt;&lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34; fill=&#34;none&#34; stroke-linecap=&#34;round&#34; stroke-miterlimit=&#34;10&#34; stroke-width=&#34;2&#34;/&gt;&lt;/svg&gt;
-    &lt;/a&gt;
-&lt;/span&gt;
-&lt;/h2&gt;
-
-
-
-
-
-&lt;style&gt;
-.__h_video {
-   position: relative;
-   padding-bottom: 56.23%;
-   height: 0;
-   overflow: hidden;
-   width: 100%;
-   background: #000;
-}
-.__h_video img {
-   width: 100%;
-   height: auto;
-   color: #000;
-}
-.__h_video .play {
-   height: 72px;
-   width: 72px;
-   left: 50%;
-   top: 50%;
-   margin-left: -36px;
-   margin-top: -36px;
-   position: absolute;
-   cursor: pointer;
-}
-&lt;/style&gt;
-
-
-&lt;div class=&#34;s_video_simple __h_video&#34;&gt;
-&lt;a href=&#34;https://vimeo.com/4.8912912e&amp;#43;07&#34; rel=&#34;noopener&#34; target=&#34;_blank&#34;&gt;
-
-
-&lt;img src=&#34;https://i.vimeocdn.com/video/337401969-979f0cc9f55fdf305fb8984e90d92639ec9d7ecc4c9dfbc6536e28edb43784ce-d_640&#34; srcset=&#34;https://i.vimeocdn.com/video/337401969-979f0cc9f55fdf305fb8984e90d92639ec9d7ecc4c9dfbc6536e28edb43784ce-d_640 1x, https://i.vimeocdn.com/video/337401969-979f0cc9f55fdf305fb8984e90d92639ec9d7ecc4c9dfbc6536e28edb43784ce-d_640 2x&#34; alt=&#34;Sing Jan Swing - Kinetic Type&#34;&gt;
-&lt;div class=&#34;play&#34;&gt;&lt;svg version=&#34;1&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 61 61&#34;&gt;&lt;circle cx=&#34;30.5&#34; cy=&#34;30.5&#34; r=&#34;30.5&#34; opacity=&#34;.8&#34; fill=&#34;#000&#34;&gt;&lt;/circle&gt;&lt;path d=&#34;M25.3 19.2c-2.1-1.2-3.8-.2-3.8 2.2v18.1c0 2.4 1.7 3.4 3.8 2.2l16.6-9.1c2.1-1.2 2.1-3.2 0-4.4l-16.6-9z&#34; fill=&#34;#fff&#34;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/div&gt;&lt;/a&gt;&lt;/div&gt;</description>
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Kriging&#34;&gt;Wikipedia: Kriging&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:2&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;An overview of kernel methods is out of scope of this post, but a good overview of Gaussian processes can be found in &lt;a href=&#34;https://gaussianprocess.org/gpml/&#34;&gt;Rassmussen and Williams&lt;/a&gt;.&amp;#160;&lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:3&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;https://gaussianprocess.org/gpml/chapters/RW2.pdf&#34;&gt;Equation 2.30&lt;/a&gt; in &lt;em&gt;Gaussian Processes for Machine Learning&lt;/em&gt; gives the log marginal likelihood for a zero-mean Gaussian process.&amp;#160;&lt;a href=&#34;#fnref:3&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:4&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;GPyTorch: Blackbox Matrix-Matrix Gaussian Process Inference with GPU Acceleration. &lt;a href=&#34;http://arxiv.org/abs/1809.11165&#34;&gt;arxiv&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref:4&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/section&gt;
+</description>
     </item>
     
   </channel>

@@ -5,6 +5,9 @@
     <loc>/</loc>
     <lastmod>2022-07-14T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>/tags/data-science/</loc>
+    <lastmod>2022-07-14T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>/tags/gp/</loc>
     <lastmod>2022-07-14T00:00:00+00:00</lastmod>
   </url><url>
@@ -12,6 +15,9 @@
     <lastmod>2022-07-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/post/gsoc_first_post/</loc>
+    <lastmod>2022-07-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/open-source/</loc>
     <lastmod>2022-07-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/post/</loc>
@@ -81,9 +87,6 @@
     <lastmod>2019-03-05T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/about/</loc>
-    <lastmod>2019-02-28T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/about.pl/</loc>
     <lastmod>2019-02-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/index/</loc>

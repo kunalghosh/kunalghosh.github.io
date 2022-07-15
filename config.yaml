@@ -3,10 +3,15 @@ baseUrl: ""
 title: "Kunal's Blog"
 theme: "anubis"
 paginate: 5
-disqusShortname: "disqus_tr8whhgxN0"
+# disqusShortname: "disqus_tr8whhgxN0"
 googleAnalytics: "G-FTG371ZK7T"
 enableRobotsTXT: true
 enableEmoji: true
+UtterancesRepo: kunalghosh/kunalghosh.github.io
+UtterancesTheme: github-light
+UtterancesLabel: blog_comment
+UtterancesIssue: pathname 
+
 
 menu:
   main:
