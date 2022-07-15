@@ -12,6 +12,7 @@ tags = [
 ]
 favourite = true
 math = true
+comments = true
 +++
 
 Gaussian processes (GPs) are very useful class of `semi-parametric` machine learning models. 
