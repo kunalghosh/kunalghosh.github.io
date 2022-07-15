@@ -7,10 +7,6 @@ paginate: 5
 googleAnalytics: "G-FTG371ZK7T"
 enableRobotsTXT: true
 enableEmoji: true
-UtterancesRepo: kunalghosh/kunalghosh.github.io
-UtterancesTheme: github-light
-UtterancesLabel: blog_comment
-UtterancesIssue: pathname 
 
 
 menu:
@@ -52,10 +48,10 @@ params:
   copyCodeButton: true # true by default
   rssAsSocialIcon: true
   # utteranc.es support
-  utterancesRepo: ""  # mandatory
-  utterancesTheme: "" # optional
-  utterancesIssue: "" # optional
-  utterancesLabel: "" # optional
+  utterancesRepo: kunalghosh/kunalghosh.github.io
+  utterancesTheme: github-light
+  utterancesLabel: blog_comment
+  utterancesIssue: pathname 
   # isso support
   isso:
     enabled: true # mandatory
