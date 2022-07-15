@@ -34,7 +34,7 @@ compute the gradient $ \frac{dL}{d\theta} $ which looks like,&lt;/p>
 &lt;p>In &lt;cite> Gardner, et.al 2018 &lt;sup id="fnref:4">&lt;a href="#fn:4" class="footnote-ref" role="doc-noteref">4&lt;/a>&lt;/sup> &lt;/cite> they proposed a few algorithms that expresses each of the above three expensive
 computations to large matrix computations which can be sped-up when running on a GPU.&lt;/p>
 &lt;blockquote>
-&lt;p>For my GSoC, I will implement a sub-class the &lt;a href="https://github.com/pymc-devs/pymc/blob/562be3781c9d37d3300c4efd4cf6598e5739c32d/pymc/gp/gp.py#L358">MarginalGP&lt;/a>
+&lt;p>For my GSoC, I will sub-class &lt;a href="https://github.com/pymc-devs/pymc/blob/562be3781c9d37d3300c4efd4cf6598e5739c32d/pymc/gp/gp.py#L358">MarginalGP&lt;/a>
 and override the &lt;code>_build_conditional()&lt;/code> and &lt;code>_build_marginal_likelihood()&lt;/code> as prescribed in &lt;cite> Gardner, et.al 2018 &lt;sup id="fnref1:4">&lt;a href="#fn:4" class="footnote-ref" role="doc-noteref">4&lt;/a>&lt;/sup> &lt;/cite> and that should significantly
 speed up Gaussian process inference in PyMC 😍&lt;/p>
 &lt;/blockquote>
