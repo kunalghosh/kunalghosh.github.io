@@ -76,8 +76,7 @@ leveraging Fast Matrix-Matrix multiplication based algorithms to speed up the
 &lt;code>log-determinant&lt;/code> and &lt;code>solve&lt;/code> computations which are the most expensive computations during GP inference.&lt;/p>
 &lt;p>The project was mainly divided into the the following parts:&lt;/p>
 &lt;ul>
-&lt;li>&lt;input checked="" disabled="" type="checkbox"> Familiarise myself with PyMC Codebase
-&lt;ul>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> Familiarise myself with PyMC Codebase&lt;/li>
 &lt;li>&lt;input checked="" disabled="" type="checkbox"> Come up with a plan to implement the algorithms&lt;/li>
 &lt;li>&lt;input checked="" disabled="" type="checkbox"> Finish initial implementations in NumPy of:&lt;/li>
 &lt;li>&lt;input checked="" disabled="" type="checkbox"> pivoted Cholesky Algorithm.&lt;/li>
@@ -88,8 +87,6 @@ leveraging Fast Matrix-Matrix multiplication based algorithms to speed up the
 &lt;li>&lt;input disabled="" type="checkbox"> Implement a GP using the GPU accelerated log-determinant and solve functions.&lt;/li>
 &lt;li>&lt;input disabled="" type="checkbox"> Convert Log-determinant and solve functions to Aesara OPs.&lt;/li>
 &lt;li>&lt;input disabled="" type="checkbox"> Integrate code into PyMC&lt;/li>
-&lt;/ul>
-&lt;/li>
 &lt;/ul>
 &lt;p>The list above also indicates the status of the individual milestones. I plan to continue working on the unfinished items after GSoC.&lt;/p>
 &lt;h1 id="contributions" >Contributions
