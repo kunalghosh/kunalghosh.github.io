@@ -29,17 +29,18 @@ leveraging Fast Matrix-Matrix multiplication based algorithms to speed up the
 `log-determinant` and `solve` computations which are the most expensive computations during GP inference.
 
 The project was mainly divided into the the following parts:  
+
   * [x] Familiarise myself with PyMC Codebase  
-	* [x] Come up with a plan to implement the algorithms
-	* [x] Finish initial implementations in NumPy of:
-	* [x] pivoted Cholesky Algorithm.
-	* [x] Linear Conjugate Gradients, which works on batches of data.
-	* [x] Check-in above two implementations.
-	* [ ] Change the algorithms to use JAX instead, check GPU utilisation.
-	* [ ] Implement log-determinant and solve functions.
-	* [ ] Implement a GP using the GPU accelerated log-determinant and solve functions.
-	* [ ] Convert Log-determinant and solve functions to Aesara OPs.
-	* [ ] Integrate code into PyMC
+  * [x] Come up with a plan to implement the algorithms
+  * [x] Finish initial implementations in NumPy of:
+  * [x] pivoted Cholesky Algorithm.
+  * [x] Linear Conjugate Gradients, which works on batches of data.
+  * [x] Check-in above two implementations.
+  * [ ] Change the algorithms to use JAX instead, check GPU utilisation.
+  * [ ] Implement log-determinant and solve functions.
+  * [ ] Implement a GP using the GPU accelerated log-determinant and solve functions.
+  * [ ] Convert Log-determinant and solve functions to Aesara OPs.
+  * [ ] Integrate code into PyMC
 
 The list above also indicates the status of the individual milestones. I plan to continue working on the unfinished items after GSoC.
 
