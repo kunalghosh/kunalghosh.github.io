@@ -46,8 +46,8 @@ The list above also indicates the status of the individual milestones. I plan to
 
 # Contributions
 
-As a part of my GSoC, I sent two pull-requests which will be merged soon [PR:62](https://github.com/pymc-devs/pymc-experimental/pull/62) [PR:63](https://github.com/pymc-devs/pymc-experimental/pull/63)
-which implement the core logic of pivoted Cholesky algorithm and the batched linear conjugate gradients, in NumPy. Apart from forming a good starting point for moving on to JAX for GPU speed-up.
+As a part of my GSoC, I sent two pull-requests which will be merged soon [PR:62](https://github.com/pymc-devs/pymc-experimental/pull/62) and [PR:63](https://github.com/pymc-devs/pymc-experimental/pull/63).
+These two PRs implement the core logic of pivoted Cholesky algorithm and the batched linear conjugate gradients, in NumPy. Apart from forming a good starting point for moving on to JAX for GPU speed-up.
 The NumPy impementations are also readable reference implementations for someone looking to working on something similar in the future.
 
 I also maintained a log of my work on [HackMD](https://hackmd.io/@CblWjfoIRO2tmCH8-j2AZA/HJTP7aPO9) and wrote a few blog posts [here](https://kunalghosh.github.io/tags/gsoc/).
